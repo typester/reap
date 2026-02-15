@@ -32,11 +32,26 @@ When sketchybar exits, `reap` kills `plugin.sh` and its descendants.
 
 ## Installation
 
+### Homebrew
+
+```sh
+brew tap typester/reap
+brew install reap
+```
+
+or directly:
+
+```sh
+brew install typester/reap/reap
+```
+
+### Cargo
+
 ```sh
 cargo install reap-process
 ```
 
-## Building from source
+### Building from source
 
 ```sh
 git clone https://github.com/typester/reap.git
