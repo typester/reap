@@ -58,7 +58,15 @@ fn run() -> anyhow::Result<i32> {
     // We manage the child via waitpid directly, not through std::process::Child
     drop(child);
 
-    // Block SIGTERM/SIGINT so they are delivered via kqueue EVFILT_SIGNAL
+    let result = run_event_loop(watch_pid, child_pid);
+    if result.is_err() {
+        kill_child_group(child_pid);
+        wait_for_child(child_pid);
+    }
+    result
+}
+
+fn run_event_loop(watch_pid: Pid, child_pid: Pid) -> anyhow::Result<i32> {
     let mut mask = SigSet::empty();
     mask.add(Signal::SIGTERM);
     mask.add(Signal::SIGINT);
