@@ -47,3 +47,4 @@ reap [--watch <pid>] -- <command> [args...]
 - All generated output (code, docs, commit messages, comments) must be in English unless explicitly instructed otherwise.
 - Code comments should be minimal — only where logic is non-obvious. Comments that merely restate what the immediately following code does are forbidden.
 - When instructions should persist across sessions, update this AGENTS.md autonomously.
+- When a task is not explicitly requested, always ask the user before proceeding. Do not assume intent or take action autonomously beyond what was clearly asked.
