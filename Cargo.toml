@@ -1,6 +1,6 @@
 [package]
 name = "reap-process"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Watch a parent process and kill child processes when it dies (macOS)"
 license = "MIT"
