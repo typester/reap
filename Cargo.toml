@@ -14,3 +14,6 @@ path = "src/main.rs"
 argh = "0.1.14"
 nix = { version = "0.31.1", features = ["event", "signal", "process"] }
 anyhow = "1.0.101"
+
+[dev-dependencies]
+nix = { version = "0.31.1", features = ["signal", "process"] }

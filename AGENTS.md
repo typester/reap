@@ -40,6 +40,7 @@ reap [--watch <pid>] -- <command> [args...]
 
 - Always run `cargo fmt` before committing.
 - Version control: `jj` (Jujutsu), not git. Never run `jj` write commands (e.g. `jj commit`, `jj new`, `jj describe`) unless explicitly instructed. Read-only `jj` commands (e.g. `jj status`, `jj log`, `jj diff`) are fine.
+- Commit messages must follow [Conventional Commits](https://www.conventionalcommits.org/) format (e.g. `feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`). This is required for release-plz.
 
 ### Conventions
 
