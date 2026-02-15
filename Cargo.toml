@@ -1,0 +1,16 @@
+[package]
+name = "reap-process"
+version = "0.1.0"
+edition = "2024"
+description = "Watch a parent process and kill child processes when it dies (macOS)"
+license = "MIT"
+repository = "https://github.com/typester/reap"
+
+[[bin]]
+name = "reap"
+path = "src/main.rs"
+
+[dependencies]
+argh = "0.1.14"
+nix = { version = "0.31.1", features = ["event", "signal", "process"] }
+anyhow = "1.0.101"
